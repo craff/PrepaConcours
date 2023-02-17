@@ -13,7 +13,9 @@ local tikz_doc_template = [[
 \usepackage{pgfplots}
 \begin{document}
 \nopagecolor
+\begin{tikzpicture}
 %s
+\end{tikzpicture}
 \end{document}
 ]]
 
@@ -57,8 +59,8 @@ local function starts_with(start, str)
 end
 
 
-function RawBlock(el)
-  if starts_with('\\begin{tikzpicture}', el.text) then
+function CodeBlock(el)
+  if el.classes[1] == "tikz" then
     local filetype = extension_for[FORMAT] or 'svg'
     local fbasename = pandoc.sha1(el.text) .. '.' .. filetype
     local fname = system.get_working_directory() .. '/' .. fbasename

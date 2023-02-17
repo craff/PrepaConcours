@@ -16,7 +16,7 @@ Par exemple:
 - la fonction logarithme:
   $]0, +\infty[ \to \mathbb{R}, x \mapsto \ln{x}$
 
-\begin{tikzpicture}
+```tikz
   \begin{axis}[
       axis lines = center,
       xlabel = $x$,
@@ -53,7 +53,7 @@ Par exemple:
     \node [below right, color=red] at (exp) {$y=e^x$};
 
   \end{axis}
-\end{tikzpicture}
+```
 
 # Fonctions d'une variable complexe
 
