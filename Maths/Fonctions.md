@@ -6,10 +6,12 @@ nombre réel un autre nombre réel. La fonction peut être définie sur
 $\mathbb{R}$ tout entier ou sur une partie de $\mathbb{R}$
 
 Par exemple:
-- la fonction logarithme:
-  $\ln: \mathbb{R} \to \mathbb{R}, x \mapsto \ln(x)$
+- la fonction exponentiele:
+  $\mathbb{R} \to \mathbb{R}, x \mapsto \e^x$
 - la fonction racine carrée:
-  $\sqrt{}: \mathbb{R} \to \mathbb{R}, x \mapsto \sqrt{x}$
+  $[0, +\infty[ \to \mathbb{R}, x \mapsto \sqrt{x}$
+- la fonction logarithme:
+  $]0, +\infty[ \to \mathbb{R}, x \mapsto \ln{x}$
 
 # Fonctions d'une variable complexe
 
