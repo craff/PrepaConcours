@@ -1,5 +1,4 @@
-# PrepaConcours
+# Cours pour la préparation au concours DSI de la DGEN
 
-$$
-\frac{x^2}{x}
-$$
+- [Cours de Maths](Maths.md)
+- [Cours de Physique](Physique.md)
