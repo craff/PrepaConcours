@@ -7,7 +7,7 @@ $\mathbb{R}$ tout entier ou sur une partie de $\mathbb{R}$
 
 Par exemple:
 - la fonction exponentiele:
-  $\mathbb{R} \to \mathbb{R}, x \mapsto \e^x$
+  $\mathbb{R} \to \mathbb{R}, x \mapsto e^x$
 - la fonction racine carrée:
   $[0, +\infty[ \to \mathbb{R}, x \mapsto \sqrt{x}$
 - la fonction logarithme:
