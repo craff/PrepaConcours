@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
-rsync -r ./ ~/WWW/PrepaConcours/
-rsync -r ./ raffalli:WWW/PrepaConcours/
+rsync -axv ./ ~/WWW/PrepaConcours/
+rsync -axv ./ raffalli:WWW/PrepaConcours/

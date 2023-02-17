@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-export FILTER=$(pwd)/links.lua
+export FILTER=$(pwd)/filters.lua
 
 echo $FILTER
 
-find . -name \*.md -exec sh -c 'echo {}; pandoc --mathml -f markdown --to=html --lua-filter $FILTER -o $(dirname {})/$(basename {} .md).html {}' \;
+find . -name \*.md -exec sh -c 'echo {}; cd $(dirname {}); pandoc --mathml -f markdown --to=html --lua-filter $FILTER -o $(basename {} .md).html $(basename {})' \;
 
-if [ ! -l index.html ]; ln -s README.html index.html; fi
+if [ ! -f index.html ]; then ln -s README.html index.html; fi
