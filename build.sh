@@ -1,9 +1,12 @@
 #!/usr/bin/bash
 
 export FILTER=$(pwd)/filters.lua
+export STYLE=$(pwd)/style.txt
+export INPUT="markdown+grid_tables"
+export OPTIONS="--pdf-engine=xelatex --mathml --lua-filter $FILTER -f $INPUT"
 
-echo $FILTER
+find . -name \*.md -exec sh -c 'echo {}; cd $(dirname {}); pandoc $OPTIONS --to=html  -o $(basename {} .md).html $STYLE $(basename {})' \;
 
-find . -name \*.md -exec sh -c 'echo {}; cd $(dirname {}); pandoc --mathml -f markdown --to=html --lua-filter $FILTER -o $(basename {} .md).html $(basename {})' \;
+#find . -name \*.md -exec sh -c 'echo {}; cd $(dirname {}); pandoc --verbose $OPTIONS --to=pdf - -o $(basename {} .md).pdf $(basename {})' \;
 
 if [ ! -f index.html ]; then ln -s README.html index.html; fi

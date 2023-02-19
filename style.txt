@@ -1,0 +1,7 @@
+<style>
+table { border-collapse: collapse; }
+th, td { border: solid black 1px; padding: 0 1ex; }
+h1 { background-color: #B0B0FF; }
+h2 { background-color: #C8C8FF; }
+h3 { background-color: #E0E0FF; }
+</style>
