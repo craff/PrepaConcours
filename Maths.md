@@ -25,7 +25,7 @@ je ne mentionne que les problèmes qui me semblent dans le programme.
 - [2018*](Annales/2018_sujet_mathematiques.pdf) problème I
 - [2021*](Annales/2021_IIM-interne-mathematiques.pdf) problème IV
 
-4. Algèbre linéaire (III)
+4. [Algèbre linéaire (III)](Lineaire.md)
 - [2005](Annales/2005-Epreuve_20_maths.pdf) problème I
 - [2011](Annales/2011-ING_1_2011_mathphysiappli.pdf) problème I
 - [2015](Annales/2015\ -\ ING_1_2015_matphyap.pdf) problème I
@@ -37,7 +37,7 @@ je ne mentionne que les problèmes qui me semblent dans le programme.
 5. Fonction de plusieurs variables (V)
 - [2005](Annales/2005-Epreuve_20_maths.pdf) problème II (intégrales doubles)
 
-6. Trigonométrie (II)
+6. [Trigonométrie (II)](Trigo.md)
 - [2011](Annales/2011-ING_1_2011_mathphysiappli.pdf) problème II
 - [2018*](Annales/2018_sujet_mathematiques.pdf) problème I
 - [2021](Annales/2021_c_inge_math_phy_metropole.pdf) problème III
