@@ -12,6 +12,8 @@ local tikz_doc_template = [[
 \usepackage{tkz-tab}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.9}
+\usetikzlibrary{calc}
+
 \begin{document}
 \nopagecolor
 \begin{tikzpicture}

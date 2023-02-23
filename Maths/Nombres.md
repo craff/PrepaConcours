@@ -34,9 +34,12 @@ Pour les ensembles non contiguës, on les écrit (si possible) comme des
 réunions d'intervalles. Par exemple: $\mathbb{R}^* = ]-\infty, 0[ \cup ]0,
 +\infty[$ représente l'ensemble de tous les réels sauf $0$.
 
-Rappel: $A \cup B$ représente la réunion de deux ensembles (les élements
-qui sont dans au moins un des deux) et $A \cap B$ l'intersection (les éléments
-qui sont dans les deux ensembles).
+Rappel:
+
+- $A \cup B$ représente la réunion de deux ensembles (les élements
+qui sont dans au moins un des deux),
+- $A \cap B$ l'intersection (les éléments qui sont dans les deux ensembles) et
+- $\emptyset$ ou $\{\}$ pour l'ensemble vide.
 
 **Exercice**: La feulle 1 «Intervalle et image» sur
 [WIMS](https://wims.univ-cotedazur.fr/wims/wims.cgi?module=adm/class/classes&lang=fr&type=authparticipant&class=6363390&subclass=yes)
@@ -176,6 +179,50 @@ $$
 
 **Exercice**: Essaye de résoudre avec la calculatrice
 [Numworks](https://www.numworks.com/simulator/)! et cherche l'erreur!
+
+### Valeur absolue et racine carrée.
+
+La racine carrée d'un nombre positif $a$ est définie comme l'unique solution
+positive de $a^2 = 0$. On la note $\sqrt{a}$. Remarque: l'équation $x^2 = a$ a
+deux solutions: $x = \sqrt{a}$ ou $x = -\sqrt{a}$
+
+On pourra relire ceci au chapitre suivant en disant que la racine carrée est
+la *fonction réciproque* de la fonction carrée sur $[0, +\infty[$.
+
+Par définition on a donc $(\sqrt{x})^2 = x$. Mais on a aussi
+$\sqrt{x^2}$ qui est égal à $x$ si $x \geq 0$ et
+$-x$ si $x \leq 0$. Cette fonction porte un nom: c'est la valeur absolue de
+$x$ notée $|x|$.
+
+La valeur absolue est beaucoup utilisée pour exprimer une distance dans
+$\mathbb{R}$ et en particulier une erreur (distance entre la *vraie* valeur et
+la valeur mesurée). Ainsi $|x - y|$ donne la distance ou l'écart entre $x$ et
+$y$.
+
+Lorsque l'on veut résoudre une équation ou une inéquation avec des valeurs
+absolue, le plus simple est souvent de distinguer les deux cas pour chaque
+valeur absolue. On peut mettre ça dans un tableau. Voici un exemple:
+
+On veut résoudre $|x - 1| + |x + 1| = 2$ ce qui revient à résoudre
+$|x - 1| + |x + 1| - 2 = 0$.
+
+On dresse le tableau suivant:
+
+```tikz
+	    \let\comma=,
+        \tkzTabInit{{} / 1, $|x-1|$ / 1 , $|x+1|$ / 1, $|x-1|+|x+1|-2$ / 1, solution / 1}
+                   {$-\infty$, $-1$, $1$, $+\infty$}
+        \tkzTabLine{, -x+1, t, -x+1, z, x-1, }
+        \tkzTabLine{, -x-1, z, x+1, t, x+1, }
+        \tkzTabLine{, -2x-2 ,z, 0, z, 2x-2, }
+        \tkzTabLine{, \emptyset ,t, ]-1 \comma 1[, t, \emptyset , }
+		\node at ($(N21)!0.5!(N22)$){2};
+		\node at ($(N24)!0.5!(N25)$){-1};
+		\node at ($(N32)!0.5!(N33)$){2};
+		\node at ($(N34)!0.5!(N35)$){1};
+```
+
+On trouve donc que tout l'intervalle $[-1,1]$ est solution de l'équation.
 
 ### Équations du premier et du second degré
 
@@ -478,6 +525,7 @@ $$
     \node [below left, color=green] at (three) {$y=10 \times 3^x$};
   \end{axis}
 ```
+
 
 ## Nombres complexes
 
