@@ -8,5 +8,3 @@ export OPTIONS="--pdf-engine=xelatex --mathml --lua-filter $FILTER -f $INPUT"
 find . -name \*.md -exec sh -c 'echo {}; cd $(dirname {}); pandoc $OPTIONS --to=html  -o $(basename {} .md).html $STYLE $(basename {})' \;
 
 #find . -name \*.md -exec sh -c 'echo {}; cd $(dirname {}); pandoc --verbose $OPTIONS --to=pdf - -o $(basename {} .md).pdf $(basename {})' \;
-
-if [ ! -f index.html ]; then ln -s README.html index.html; fi
