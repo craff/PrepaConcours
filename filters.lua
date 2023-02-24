@@ -71,8 +71,8 @@ function CodeBlock(el)
       tikz2image(el.text, filetype, fname)
     end
     image = pandoc.Image({}, fbasename)
-    image.attr = { style="margin:5 5 5 100;" }
-    return pandoc.Para({image})
+    div_attr = { style="text-align: center;" }
+    return pandoc.Div(pandoc.Para({image}), div_attr)
   else
    return el
   end
