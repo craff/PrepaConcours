@@ -1,3 +1,9 @@
+<div style="position: fixed; right:10px; top: 0px; font-weight: bold;
+            font-size: x-large;">
+  <a href="../Maths.html" style="text-decoration: none;">↑</a>
+  <a href="Fonctions.html" style="text-decoration: none;">→</a>
+</div>
+
 # Nombres réels et complexes
 
 ## Nombres réels
@@ -61,23 +67,23 @@ transformations «légales» concernant l'addition, la soustraction, la
 multiplication, la division et la puissance doivent pouvoir se ramener aux
 règles de calculs suivantes:
 
-+------------------------------+------------------------------+---------------------+
-| Addition                     | Multiplication               | Puissance           |
-+:============================:+:============================:+:===================:+
-|                              | $x × 0 = 0$                  | $x^0 = 1$           |
-+------------------------------+------------------------------+---------------------+
-|  $x + 0 = x$                 | $x × 1 = x$                  | $x^1 = x$           |
-+------------------------------+------------------------------+---------------------+
-| $x + (-y) = 0$               | $x × y^{-1} = 1$             |                     |
-+------------------------------+------------------------------+---------------------+
-|  $x + y = y + x$             | $x × y = y × x$              |                     |
-+------------------------------+------------------------------+---------------------+
++------------------------------+------------------------------+---------------------------+
+| Addition                     | Multiplication               | Puissance                 |
++:============================:+:============================:+:=========================:+
+|                              | $x × 0 = 0$                  | $x^0 = 1$                 |
++------------------------------+------------------------------+---------------------------+
+|  $x + 0 = x$                 | $x × 1 = x$                  | $x^1 = x$                 |
++------------------------------+------------------------------+---------------------------+
+| $x + (-x) = 0$               | $x × x^{-1} = 1$             | $(xy)^{-1} = y^{-1}x^{-1} |
++------------------------------+------------------------------+---------------------------+
+|  $x + y = y + x$             | $x × y = y × x$              |                           |
++------------------------------+------------------------------+---------------------------+
 |  $(x + y) + z = x + (y + z)$ | $(x × y) × z = x × (y × z)$  | $(x^y)^z = x^{y\times z}$ |
-+-------------------------------------------------------------+---------------------+
-| $(x + y) × z = x × z + y × z$| $x ^{y + z} = x^y × x^z$                           |
-+------------------------------+------------------------------+---------------------+
-| $x - y = x + (-y)$           | $\frac{x}{y} = x × y^{-1}$   |                     |
-+------------------------------+------------------------------+---------------------+
++-------------------------------------------------------------+---------------------------+
+| $(x + y) × z = x × z + y × z$| $x ^{y + z} = x^y × x^z$                                 |
++------------------------------+------------------------------+---------------------------+
+| $x - y = x + (-y)$           | $\frac{x}{y} = x × y^{-1}$   |  $x^{-a} = \frac{1}{x^a}  |
++------------------------------+------------------------------+---------------------------+
 
 Quelques remarques:
 
@@ -93,6 +99,15 @@ Quelques remarques:
   et les parenthèses comptent). De plus, $x^y$ est défini seulement lorsque $x
   \geq 0$ ou si $y$ est un entier relatif! $(-2)^{\frac{1}{2}}$ n'est pas
   défini, mais $(-2)^{-3}$ l'est.
+
+La distributivité joue un rôle important et on y consacre deux mots de
+vocabulaire:
+
+- *développer*: lorsque l'on fait «rentrer la multiplication» afin d'écrire
+l'expression comme une somme, en général pour simplifier. On peut toujours développer.
+- *factoriser* ou mettre en facteur: lorsque l'on fait ressortir les
+multiplications, en général pour résoudre une équation ou une inéquation. On
+ne peut factoriser que si l'on trouve un *facteur commun*.
 
 À ce tableau, on doit ajouter des règles concernant les fonctions «usuelles»
 comme le logarithme $\ln$ ou les fonctions trigonométrique $\sin$, $\cos$ et
@@ -122,6 +137,10 @@ vous permettra de vous entrainer.
 
 - Retrouver les identités remarquables usuelles en développant $(a+b)^2$,
   $(a-b)^2$ et $(a+b)(a-b)$
+
+  Remarque: il est important d'apprendre à reconnaître les identités
+  remarquables afin de gagner du temps lorsque l'on doit factoriser une
+  expression.
 
 - Développer $(a+b+c)^2$. Que se passe-t-il avec plus de nombres?
 
@@ -198,6 +217,12 @@ La valeur absolue est beaucoup utilisée pour exprimer une distance dans
 $\mathbb{R}$ et en particulier une erreur (distance entre la *vraie* valeur et
 la valeur mesurée). Ainsi $|x - y|$ donne la distance ou l'écart entre $x$ et
 $y$.
+
+En dimension 2, la distance s'exprime grâce au théorème de Pythagore: si deux
+points $A$ et $B$ ont pour coordonnées $(x_A, y_A)$ et $(x_B, y_B)$ alors,
+la distance entre $A$ et $B$ s'exprime par $\sqrt{(x_B - x_A)^2 + (y_B -
+y_A)^2}$, si l'on est en dimension 1, $y_A$ et $y_B$ disparraissent et on
+retrouve $\sqrt{(x_B - x_A)^2} = |x_B - x_A|$.
 
 Lorsque l'on veut résoudre une équation ou une inéquation avec des valeurs
 absolue, le plus simple est souvent de distinguer les deux cas pour chaque
@@ -415,7 +440,7 @@ réciproque, le logarithme fait l'inverse:
   \ln_a(y_1) + \ln_a(y_2)$
 
 4) $a^{x_1 \times x_2} = (a^{x_1})^{x_2} = (a^{x_2})^{x_1}$
-  donc $\ln_a(y^z) = z \ln_a(y) = \ln_a(y_1) + \ln_a(y_2)$ (essayez de le
+  donc $\ln_a(y^z) = z \ln_a(y)$ (essayez de le
   démontrer).
 
 Ces relations permettent de changer de base:
