@@ -30,7 +30,6 @@ local function tikz2image(src, filetype, outfile)
       f:close()
       os.execute('cat tikz.tex')
       os.execute('xelatex tikz.tex')
-      os.execute('ls')
       if filetype == 'pdf' then
         os.rename('tikz.pdf', outfile)
       else

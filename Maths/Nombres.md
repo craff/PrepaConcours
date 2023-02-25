@@ -205,8 +205,26 @@ La racine carrée d'un nombre positif $a$ est définie comme l'unique solution
 positive de $a^2 = 0$. On la note $\sqrt{a}$. Remarque: l'équation $x^2 = a$ a
 deux solutions: $x = \sqrt{a}$ ou $x = -\sqrt{a}$
 
-On pourra relire ceci au chapitre suivant en disant que la racine carrée est
+On pourra relire cette sectnop au chapitre suivant en disant que la racine carrée est
 la *fonction réciproque* de la fonction carrée sur $[0, +\infty[$.
+
+Une «astuce» courante est la multiplication par la *quantité conjugué* qui
+permet d'éliminer les racines. Dans une somme de deux terme, il s'agit
+de la même somme avec le signe inversé devant la racine. Par exemple
+la quantité conjugué de $2 + \sqrt{5}$ est $2 - \sqrt{5}$.
+L'identité de marquable $a² - b² = (a+b)(a-b)$ nous donne en effet
+$4 - 5 = (2 + \sqrt{5})(2 - \sqrt{5})$
+
+Cela permet par
+exemple d'éliminer un racine du dénominateur:
+
+$$
+\begin{eqnarray}
+\frac{1}{2 + \sqrt{5}} &=& \frac{2 - \sqrt{5}}{(2 + \sqrt{5})(2 - \sqrt{5})} \\
+ &=&  \frac{2 - \sqrt{5}}{4 - 5} \\
+ &=& \sqrt{5} - 2
+\end{eqnarray}
+$$
 
 Par définition on a donc $(\sqrt{x})^2 = x$. Mais on a aussi
 $\sqrt{x^2}$ qui est égal à $x$ si $x \geq 0$ et
@@ -396,7 +414,7 @@ exactement une fois.
 
 Donc, pour une base fixée $a$ et pour chaque nombre réel $y > 0$, il existe un
 unique réel $x$ tel que $y = a^x$. On dit alors que $x$ est le *logarithme* de
-$y$ en base $a$ qui se note $y = \ln_a(x)$. On dit que le logarithme est la
+$y$ en base $a$ qui se note $y = \log_a(x)$. On dit que le logarithme est la
 fonction réciproque de l'exponentielle (On parle aussi de fonction inverse,
 mais il y a risque de confusion entre l'inverse d'un nombre $\frac{1}{x}$ et
 l'inverse d'une fonction).
@@ -429,28 +447,28 @@ Voici le graphe du logarithme népérien:
 Le fait que le logarithme soit la fonction
 réciproque de l'exponentielle et inversement, se traduit par:
 
-1) $\ln_a(a^x) = x$ pour tout nombre $x$ réel et toute base $a > 0$.
-2) $a^{\ln_a(y)} = y$ pour tout nombre réel $y > 0$ et toute base $a > 0$.
+1. $\log_a(a^x) = x$ pour tout nombre $x$ réel et toute base $a > 0$.
+2. $a^{\log_a(y)} = y$ pour tout nombre réel $y > 0$ et toute base $a > 0$.
 
 Comme on l'a vu plus haut, l'exponentielle envoie l'addition sur la
 multiplication et la multiplication sur la puissance. Comme fonction
 réciproque, le logarithme fait l'inverse:
 
-3) $a^{x_1+x_2} = a^{x_1} \times a^{x_2}$ donc $\ln_a(y_1 \times y_2) =
-  \ln_a(y_1) + \ln_a(y_2)$
+3. $a^{x_1+x_2} = a^{x_1} \times a^{x_2}$ donc $\log_a(y_1 \times y_2) =
+  \log_a(y_1) + \log_a(y_2)$
 
-4) $a^{x_1 \times x_2} = (a^{x_1})^{x_2} = (a^{x_2})^{x_1}$
-  donc $\ln_a(y^z) = z \ln_a(y)$ (essayez de le
+4. $a^{x_1 \times x_2} = (a^{x_1})^{x_2} = (a^{x_2})^{x_1}$
+  donc $\log_a(y^z) = z \log_a(y)$ (essayez de le
   démontrer).
 
 Ces relations permettent de changer de base:
 
-5) $a^x = b^{x \ln_b(a)}$
+5. $a^x = b^{x \log_b(a)}$
 
 Dans le cas de la base $e$ on parle de logarithme naturel ou népérien et
-on notre simplement $\ln(x)$ pour $\ln_e(x)$. Donc on peut écrire:
+on notre simplement $\ln(x)$ pour $\log_e(x)$. Donc on peut écrire:
 
-6) $a^x = e^{x \ln(a)}$
+6. $\mathbold{a^x = e^{x \ln(a)}}$
 
 Attention, sur les calculatrices, on trouve souvent `ln` pour le logarithme naturel et
 `log` pour le logarithme en base $10$, tandis que beaucoup de langage de
@@ -495,8 +513,8 @@ On retiendra:
   Si $x > y$ et $a > 1$, $a^x > a^y$.
 - L'exponentielle inverse l'ordre si la base est inférieure à $1$:
   Si $x > y$ et $0 < a < 1$, $a^x < a^y$.
-- Le logarithme de base $a > 1$ préserve l'ordre
-- Le logarithme de base $0 < a < 1$ inverse l'ordre
+- Le logarithme de base $a > 1$ préserve l'ordre.
+- Le logarithme de base $0 < a < 1$ inverse l'ordre (jamais utilisé)
 
 Il faut faire attention avec l'inverse:
 
@@ -555,3 +573,26 @@ $$
 ## Nombres complexes
 
 À venir
+
+
+## Exercices du chapitre
+
+Résoudre les équations et les inéquations suivantes:
+
+1. $x² - 3x + 2 = 0$
+2. $x³ - x² + x - 1 = 0$ (indication: mettre $x-1$ en facteur)
+3. $-3 + |4-6x|  ≤ -x - 4$
+4. $\sqrt{4x-20} > 6$
+5. $\sqrt{x-5} - \sqrt{4-2x} < 0$
+6. $2\sqrt{x} - \sqrt{x+1} = 1$
+7. $2 \sqrt{3+\frac{1}{x}} < 8$
+8. $3 × 2ˣ ≤ 2 × 3ˣ$
+9. $e^{2x} - eˣ - 6 = 0$
+10. $3eˣ - 7e^{-x} ≤ 20$
+11. $\frac{eˣ + e^{-x}}{2} ≤ e^{|x|}$ remarque: $\frac{eˣ + e^{-x}}{2}$
+   s'appelle le *cosinus hyperbolique* de x, noté $\cosh(x)$.
+12. $\ln(x²-1) - \ln(2x-1) + \ln(2) = 0$
+13. $\ln(x + 2) - \ln(x+1) = \ln(x-1)$
+14. $(2 x - 7) \ln(x+1) > 0$
+15. $(\ln(x) + 1)(\ln(x) - 2) ≥ 0$
+16. Simplifier $x^\frac{\ln(\ln(x))}{\ln(x)}$ et $\log_x(\log_x(x^{xʸ}))$
