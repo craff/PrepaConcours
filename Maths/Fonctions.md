@@ -1,3 +1,6 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div style="position: fixed; right:10px; top: 0px; font-weight: bold;
             font-size: x-large;">
   <a href="Nombres.html" style="text-decoration: none;">←</a>
@@ -69,17 +72,17 @@ départ) et son ensemble d'arrivée. On peut très
 bien considérer ce que l'on appelle la *restriction* d'une fonction en
 diminuant son domaine de définition et parfois son ensemble d'arrivée.
 
-Donc la définition d'une fonction donne toujours:
+La définition d'une fonction comporte:
 
 - l'ensemble de départ (un sous-ensemble de $\mathbb{R}$ dans le cas des
   fonctions réelles) ;
 - l'ensemble d'arrivée (un autre sous-ensemble de $\mathbb{R}$ dans le cas des
   fonctions réelles) ;
 - un moyen de calculer l'*image* par la fonction de n'importe quel élément de
-  l'ensemble de départ.
+  l'ensemble de départ. Cette image doit être dans l'ensemble d'arrivée.
 
-Example: Soit la fonction $f : \mathbb{R_+^*} \to \mathbb{R}$ telle que $f(x)
-= \frac{\ln(x)}{\sqrt{x}}$, souvent présentée sur deux lignes:
+Example: «Soit la fonction $f : \mathbb{R_+^*} \to \mathbb{R}$ telle que $f(x)
+= \frac{\ln(x)}{\sqrt{x}}$». On présente souvent la définition sur deux lignes:
 
 $$
 \begin{eqnarray*}
@@ -137,8 +140,8 @@ ou sur un intervalle plus petit. Voici les principales:
 
 - *Injective*: une fonction est injective sur $I$ si tous les éléments de $I$
   s'envoient sur des éléments distincts de $I$: c'et à dire que si $x \neq y$
-  dans $I$ alors $f(x) \neq f(y)$, on par la *contraposée*, si $f(x) = f(y)$
-  pour $x,y \in I$, alors $x = y$.
+  dans $I$ alors $f(x) \neq f(y)$ (ou par la *contraposée*, si $f(x) = f(y)$
+  pour $x,y \in I$, alors $x = y$).
 
   Remarque: une fonction strictement monotone sur I est toujours injective.
 
@@ -175,6 +178,15 @@ On a deux types très importants de fonctions qu'il faut connaître:
   s'écrire
   $$ a_0 + a_1 x + a_2 x^2 + \dots + a_d x^d $$
   La plus grande puissance de $x$ s'appelle le degré du polynôme.
+
+  Les polynômes on deux propriétés fondamentales sur $\mathbb{R}$:
+
+  - un polynôme $p(x)$ de degré $d$ possède au maximum deux *racines*. Une
+    racine de $p(x)$ est simplement une solution de l'équation $p(x) = 0$.
+
+  - Si $a$ est une racine de $p(x)$ on peut mettre en facteur $(x-a)$. La
+    réciproque est évidemment vraie.
+
 - Les fractions rationnelles autorisent en plus la division. On peut toujours se
   ramener à un quotient de deux polynômes:
   $$
@@ -195,6 +207,7 @@ $a$ avec une précision suffisante. On peut donc définir la continuité en $a$
 par l'existence d'une fonction qui à chaque $\varepsilon > 0$ (la précision que
 l'on veut pour $f(a)$) nous associe $\eta > 0$ (la précision nécessaire sur
 $a$). On a alors $|f(x) - f(a)| < \varepsilon$ dès que $|x - a| < \eta$.
+Maîtriser cette définition n'est probablement pas nécessaire ici.
 
 Le point important sur les fonctions continues est qu'il est en général facile
 de savoir si elles sont continues avec les règles suivantes:
@@ -207,6 +220,8 @@ de savoir si elles sont continues avec les règles suivantes:
   $\frac{f(x)}{g(x)}$ est continue sur $I$.
 - Si $g$ est continue sur $I$ et $f$ est continue sur $g(I)$, alors $f(g(x))$
   est continue sur $I$.
+- Si $f$ est bijective et continue sur $I$, sa fonction réciproque $f^{-1}$
+  est continue sur $f(I)$.
 
 Pour appliquer ces règles il faut aussi connaître le *domaine de continuité*
 des fonctions de bases: pour tous les cas usuels, ces fonctions sont continues
@@ -337,17 +352,16 @@ On commence par donner la dérivée des fonctions usuelles:
 
 - Les fonctions *polynômes* sont dérivables sur $\mathbb{R}$:
 
-  si $(x^b)' = b x ^{b-1}$
+  $$(x^b)' = b x ^{b-1}$$
 
   Cette formule marche si $b$ est un entier OU si $x > 0$.
 
   Pour dériver un polynôme arbitraire, il suffit d'appliquer cette règle et la
   régle sur la dérivée de la somme ci-dessous.
 
-  Cette formule donne aussi $(\frac{1}{x})' = - \frac{1}{x^2}$ sur
-  $\mathbb{R^*}$ avec $b = -1$
-  et $(\sqrt{x})' = \frac{1}{2\sqrt{x}}$ avec $b = \frac{1}{2}$ sur
-  $\mathbb{R_+^*}$.
+  Avec $b = -1$ et $b = \frac{1}{2}$, cette formule donne aussi:
+
+  $$\left(\frac{1}{x}\right)' = - \frac{1}{x^2} \text{ et } \left(\sqrt{x}\right)' = \frac{1}{2\sqrt{x}}$$
 
   Attention, la fonction racine carrée est continue sur  $\mathbb{R_+}$
   et dérivable sur   $\mathbb{R_+^*}$. C'est une des rares fonctions de base
@@ -361,15 +375,15 @@ On commence par donner la dérivée des fonctions usuelles:
 - La fonction exponentielle est dérivable sur $\mathbb{R}$ et
   elle est sa propre dérivée. De manière générale on a
 
-  $(e^x)' = e^x$ et $(a^x)' = \ln(x) a^x$
+  $$(e^x)' = e^x \text{ et } (a^x)' = \ln(x) a^x$$
 
-- La fonction logarithme est dérivable sur $\mathbb{R^*_+}$ et
-  $\ln'(x) = \frac{1}{x}$. On a même $(\ln(|x|))' = \frac{1}{x}$
-  sur $\mathbb{R^*}$.
+- La fonction logarithme est dérivable sur $\mathbb{R^*_+}$:
+  $$\ln'(x) = \frac{1}{x} \text{ et même } (\ln|x|)' = \frac{1}{x}
+  \text{ sur } \mathbb{R^*}$$
 
 - Les fonctions $\sin$ et $\cos$ sont dérivables sur $\mathbb{R}$:
 
-  $\sin'(x) = \cos(x)$ et $\cos'(x) = - \sin(x)$
+  $$\sin'(x) = \cos(x) \text{ et } \cos'(x) = - \sin(x)$$
 
 Voici maintenant des règles générales:
 
@@ -384,6 +398,12 @@ Voici maintenant des règles générales:
   $$(f\times g)'(x) = f'(x) g(x) + f(x) g'(x)$$
 
   Exemple: $f(x) = x \ln(x)$, $f'(x) = 1 \ln(x) + x \frac{1}{x} = \ln(x) + 1$.
+
+  Un cas particulier de cette règle est pour $a \in \mathbb{R}$:
+
+  $$(a f(x))' = a f'(x)$$
+
+  Lorsqu'on dérive la constante $a$ on trouve $0$ donc le terme $(a)'f(x)$ disparaît.
 
 - Si $f$ et $g$ sont dérivables sur $I$ si $g(x)$ ne s'annule pas sur $I$,
   $\frac{f(x)}{g(x)}$ est dérivable sur $I$. et
@@ -470,7 +490,7 @@ $$ \begin{array}{rcll} x² - \frac{1}{x²} &>& 0 &\text{($× x²$ des deux côt�
 
 5. Tableau de variation
 ```tikz
-        \tkzTabInit{$x$ / 1 , $x-1$ / 1, $x+1$ / 1, $x² + 1$ / 1,
+        \tkzTabInit{$x$ / 1 , $x-1$ / 1, $x+1$ / 1, $x^2 + 1$ / 1,
                     $f'(x)$ / 1, $f(x)$ / 2}
                    {$-\infty$, $-1$, $0$, $1$, $+\infty$}
         \tkzTabLine{, -, , - , , -, z, +, }
@@ -502,7 +522,7 @@ $$ \begin{array}{rcll} x² - \frac{1}{x²} &>& 0 &\text{($× x²$ des deux côt�
           \end{axis}
 ```
 
-# Quelques mots sur les suites
+## Quelques mots sur les suites
 
 Une suite c'est une fonction de $\mathbb{N} \to \mathbb{R}$.
 Beaucoup des concepts décrits plus haut s'applique aux suites,
@@ -512,15 +532,15 @@ Par contre le fait que l'ensemble des entiers naturels soit discontinue
 implique que les notions de continuité, de dérivabilité ou de limite en un
 point n'ont pas de sens.
 
-## Limite d'une suite
+### Limite d'une suite
 
 À venir ...
 
-## Suite définie par récurrence
+### Suite définie par récurrence
 
 À venir ...
 
-# Fonctions d'une variable complexe
+## Fonctions d'une variable complexe
 
 On ne traitera probablement pas cette partie en détail. Les fonctions
 complexes sont un monde assez différent des fonctions réelles.

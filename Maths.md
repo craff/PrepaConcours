@@ -1,3 +1,7 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 # Cours de mathématiques
 
 Voici les différents chapitres, entre parenthèses le numéro correspondant dans
@@ -18,7 +22,7 @@ je ne mentionne que les problèmes qui me semblent dans le programme.
 - [2019](Annales/2019-ING19_INT_MATHS_PHYSIQUE.pdf) problème II et III
 - [2021](Annales/2021_c_inge_math_phy_metropole.pdf) problème I et II
 
-3. [Équations différentielles (VI)](Maths/Eqdiff.md)
+3. [Intégrales et Équations différentielles (VI)](Maths/Eqdiff.md)
 - [2011](Annales/2011-ING_1_2011_mathphysiappli.pdf) problème II
 - [2015*](Annales/2015_Maths.pdf) problème IV
 - [2016*](Annales/2016_Mathematiques.pdf) problème III
@@ -28,6 +32,8 @@ je ne mentionne que les problèmes qui me semblent dans le programme.
 4. [Algèbre linéaire (III)](Maths/Lineaire.md)
 - [2005](Annales/2005-Epreuve_20_maths.pdf) problème I
 - [2011](Annales/2011-ING_1_2011_mathphysiappli.pdf) problème I
+- [2013](Annales/2013_CONCOURS\ INTERNE\ D\ INGENIEUR\ TERRITORIAL.pdf)
+  problème II
 - [2015](Annales/2015\ -\ ING_1_2015_matphyap.pdf) problème I
 - [2017](Annales/2017mathsetphysiqueappliques.pdf) problème II
 - [2019](Annales/2019-ING19_INT_MATHS_PHYSIQUE.pdf) problème I
@@ -37,7 +43,7 @@ je ne mentionne que les problèmes qui me semblent dans le programme.
 5. [Fonction de plusieurs variables (V)](Maths/Multivar.md)
 - [2005](Annales/2005-Epreuve_20_maths.pdf) problème II (intégrales doubles)
 
-6. [Trigonométrie (II)](Maths/Trigo.md)
+6. [Trigonométrie et nombres complexes  (I et II)](Maths/Trigo.md)
 - [2011](Annales/2011-ING_1_2011_mathphysiappli.pdf) problème II
 - [2018*](Annales/2018_sujet_mathematiques.pdf) problème I
 - [2021](Annales/2021_c_inge_math_phy_metropole.pdf) problème III
@@ -45,6 +51,8 @@ je ne mentionne que les problèmes qui me semblent dans le programme.
 7. [Géométrie du plan et de l'espace (VII)](Maths/Geometrie.md)
 - [2005](Annales/2005-Epreuve_20_maths.pdf) problème II
 - [2011](Annales/2011-ING_1_2011_mathphysiappli.pdf) problème I
+- [2013](Annales/2013_CONCOURS\ INTERNE\ D\ INGENIEUR\ TERRITORIAL.pdf)
+  problème I
 - [2017](Annales/2017mathsetphysiqueappliques.pdf) problème I
 - [2018*](Annales/2018_sujet_mathematiques.pdf) problème I
 - [2019](Annales/2019-ING19_INT_MATHS_PHYSIQUE.pdf) problème III (et un peu II)

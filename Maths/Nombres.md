@@ -1,3 +1,6 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div style="position: fixed; right:10px; top: 0px; font-weight: bold;
             font-size: x-large;">
   <a href="../Maths.html" style="text-decoration: none;">↑</a>
@@ -568,12 +571,6 @@ $$
     \node [below left, color=green] at (three) {$y=10 \times 3^x$};
   \end{axis}
 ```
-
-
-## Nombres complexes
-
-À venir
-
 
 ## Exercices du chapitre
 
